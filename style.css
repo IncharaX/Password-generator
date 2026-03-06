@@ -1,0 +1,38 @@
+body{
+font-family: Arial;
+background: linear-gradient(to right,#667eea,#764ba2);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+width:300px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+input{
+padding:10px;
+width:90%;
+margin-top:10px;
+}
+
+button{
+padding:10px;
+margin-top:10px;
+border:none;
+background:#667eea;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#5563c1;
+}
