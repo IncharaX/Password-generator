@@ -1,19 +1,34 @@
 function generatePassword(){
 
-let length=document.getElementById("length").value;
+let length = document.getElementById("length").value;
 
-let characters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
 
-let password="";
+let password = "";
 
 for(let i=0;i<length;i++){
 
-let randomIndex=Math.floor(Math.random()*characters.length);
+let randomIndex = Math.floor(Math.random()*characters.length);
 
-password+=characters[randomIndex];
+password += characters[randomIndex];
 
 }
 
-document.getElementById("password").value=password;
+document.getElementById("password").value = password;
 
+}
+
+
+function copyPassword(){
+
+let passwordField = document.getElementById("password");
+
+if(passwordField.value === ""){
+alert("Generate a password first!");
+return;
+}
+
+navigator.clipboard.writeText(passwordField.value);
+
+alert("Password copied to clipboard!");
 }
